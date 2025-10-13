@@ -1,0 +1,17 @@
+ysyx-workbench
+
+# Build artifacts
+E4/minirvEMU/build/
+F3/adder/sim/sim_build/
+*.o
+*.a
+*.elf
+*.out
+*.d
+*.ll
+*.s
+*.dump
+*.vvp
+*.fst
+__pycache__/
+*.pyc

@@ -1,0 +1,163 @@
+1,2d0
+< #define __amd64 1
+< #define __amd64__ 1
+6,7d3
+< #define __ATOMIC_HLE_ACQUIRE 65536
+< #define __ATOMIC_HLE_RELEASE 131072
+28d23
+< #define __BITINT_MAXWIDTH__ 65535
+34c29
+< #define __code_model_small__ 1
+---
+> #define __CHAR_UNSIGNED__ 1
+51,78d45
+< #define __DEC128_EPSILON__ 1E-33DL
+< #define __DEC128_MANT_DIG__ 34
+< #define __DEC128_MAX__ 9.999999999999999999999999999999999E6144DL
+< #define __DEC128_MAX_EXP__ 6145
+< #define __DEC128_MIN__ 1E-6143DL
+< #define __DEC128_MIN_EXP__ (-6142)
+< #define __DEC128_SUBNORMAL_MIN__ 0.000000000000000000000000000000001E-6143DL
+< #define __DEC32_EPSILON__ 1E-6DF
+< #define __DEC32_MANT_DIG__ 7
+< #define __DEC32_MAX__ 9.999999E96DF
+< #define __DEC32_MAX_EXP__ 97
+< #define __DEC32_MIN__ 1E-95DF
+< #define __DEC32_MIN_EXP__ (-94)
+< #define __DEC32_SUBNORMAL_MIN__ 0.000001E-95DF
+< #define __DEC64_EPSILON__ 1E-15DD
+< #define __DEC64_MANT_DIG__ 16
+< #define __DEC64_MAX__ 9.999999999999999E384DD
+< #define __DEC64_MAX_EXP__ 385
+< #define __DEC64_MIN__ 1E-383DD
+< #define __DEC64_MIN_EXP__ (-382)
+< #define __DEC64_SUBNORMAL_MIN__ 0.000000000000001E-383DD
+< #define __DEC64X_EPSILON__ 1E-33D64x
+< #define __DEC64X_MANT_DIG__ 34
+< #define __DEC64X_MAX__ 9.999999999999999999999999999999999E6144D64x
+< #define __DEC64X_MAX_EXP__ 6145
+< #define __DEC64X_MIN__ 1E-6143D64x
+< #define __DEC64X_MIN_EXP__ (-6142)
+< #define __DEC64X_SUBNORMAL_MIN__ 0.000000000000000000000000000000001E-6143D64x
+80,81c47
+< #define __DECIMAL_BID_FORMAT__ 1
+< #define __DECIMAL_DIG__ 21
+---
+> #define __DECIMAL_DIG__ 36
+165,168c131,134
+< #define __FLT64X_DECIMAL_DIG__ 21
+< #define __FLT64X_DENORM_MIN__ 3.64519953188247460252840593361941982e-4951F64x
+< #define __FLT64X_DIG__ 18
+< #define __FLT64X_EPSILON__ 1.08420217248550443400745280086994171e-19F64x
+---
+> #define __FLT64X_DECIMAL_DIG__ 36
+> #define __FLT64X_DENORM_MIN__ 6.47517511943802511092443895822764655e-4966F64x
+> #define __FLT64X_DIG__ 33
+> #define __FLT64X_EPSILON__ 1.92592994438723585305597794258492732e-34F64x
+173c139
+< #define __FLT64X_MANT_DIG__ 64
+---
+> #define __FLT64X_MANT_DIG__ 113
+175c141
+< #define __FLT64X_MAX__ 1.18973149535723176502126385303097021e+4932F64x
+---
+> #define __FLT64X_MAX__ 1.18973149535723176508575932662800702e+4932F64x
+180c146
+< #define __FLT64X_NORM_MAX__ 1.18973149535723176502126385303097021e+4932F64x
+---
+> #define __FLT64X_NORM_MAX__ 1.18973149535723176508575932662800702e+4932F64x
+200,201c166,170
+< #define __FXSR__ 1
+< #define __GCC_ASM_FLAG_OUTPUTS__ 1
+---
+> #define __FP_FAST_FMA 1
+> #define __FP_FAST_FMAF 1
+> #define __FP_FAST_FMAF32 1
+> #define __FP_FAST_FMAF32x 1
+> #define __FP_FAST_FMAF64 1
+214,215d182
+< #define __GCC_CONSTRUCTIVE_SIZE 64
+< #define __GCC_DESTRUCTIVE_SIZE 64
+225,226c192,193
+< #define __GNUC_MINOR__ 2
+< #define __GNUC_PATCHLEVEL__ 1
+---
+> #define __GNUC_MINOR__ 1
+> #define __GNUC_PATCHLEVEL__ 0
+231d197
+< #define __HAVE_SPECULATION_SAFE_VALUE 1
+277,282c243,246
+< #define __k8 1
+< #define __k8__ 1
+< #define __LDBL_DECIMAL_DIG__ 21
+< #define __LDBL_DENORM_MIN__ 3.64519953188247460252840593361941982e-4951L
+< #define __LDBL_DIG__ 18
+< #define __LDBL_EPSILON__ 1.08420217248550443400745280086994171e-19L
+---
+> #define __LDBL_DECIMAL_DIG__ 36
+> #define __LDBL_DENORM_MIN__ 6.47517511943802511092443895822764655e-4966L
+> #define __LDBL_DIG__ 33
+> #define __LDBL_EPSILON__ 1.92592994438723585305597794258492732e-34L
+287c251
+< #define __LDBL_MANT_DIG__ 64
+---
+> #define __LDBL_MANT_DIG__ 113
+289c253
+< #define __LDBL_MAX__ 1.18973149535723176502126385303097021e+4932L
+---
+> #define __LDBL_MAX__ 1.18973149535723176508575932662800702e+4932L
+294c258
+< #define __LDBL_NORM_MAX__ 1.18973149535723176502126385303097021e+4932L
+---
+> #define __LDBL_NORM_MAX__ 1.18973149535723176508575932662800702e+4932L
+304,305d267
+< #define __MMX__ 1
+< #define __MMX_WITH_SSE__ 1
+318a281,307
+> #define __riscv 1
+> #define __riscv_a 2001000
+> #define __riscv_arch_test 1
+> #define __riscv_atomic 1
+> #define __riscv_c 2000000
+> #define __riscv_cmodel_medany 1
+> #define __riscv_compressed 1
+> #define __riscv_d 2002000
+> #define __riscv_div 1
+> #define __riscv_f 2002000
+> #define __riscv_fdiv 1
+> #define __riscv_flen 64
+> #define __riscv_float_abi_double 1
+> #define __riscv_fsqrt 1
+> #define __riscv_i 2001000
+> #define __riscv_m 2000000
+> #define __riscv_misaligned_slow 1
+> #define __riscv_mul 1
+> #define __riscv_muldiv 1
+> #define __riscv_xlen 64
+> #define __riscv_zaamo 1000000
+> #define __riscv_zalrsc 1000000
+> #define __riscv_zca 1000000
+> #define __riscv_zcd 1000000
+> #define __riscv_zicsr 2000000
+> #define __riscv_zifencei 2000000
+> #define __riscv_zmmul 1000000
+321,322d309
+< #define __SEG_FS 1
+< #define __SEG_GS 1
+331d317
+< #define __SIZEOF_FLOAT128__ 16
+333d318
+< #define __SIZEOF_FLOAT80__ 16
+347,351d331
+< #define __SSE__ 1
+< #define __SSE2__ 1
+< #define __SSE2_MATH__ 1
+< #define __SSE_MATH__ 1
+< #define __SSP_STRONG__ 3
+403c383
+< #define __VERSION__ "15.2.1 20250813"
+---
+> #define __VERSION__ "15.1.0"
+412,413d391
+< #define __x86_64 1
+< #define __x86_64__ 1

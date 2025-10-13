@@ -1,0 +1,123 @@
+
+a.out:	file format elf64-littleriscv
+
+Disassembly of section .plt:
+
+0000000000000590 <.plt>:
+     590: 00002397     	auipc	t2, 0x2
+     594: 41c30333     	sub	t1, t1, t3
+     598: a603be03     	ld	t3, -0x5a0(t2)
+     59c: fd430313     	addi	t1, t1, -0x2c
+     5a0: a6038293     	addi	t0, t2, -0x5a0
+     5a4: 00135313     	srli	t1, t1, 0x1
+     5a8: 0082b283     	ld	t0, 0x8(t0)
+     5ac: 000e0067     	jr	t3
+     5b0: 00002e17     	auipc	t3, 0x2
+     5b4: a50e3e03     	ld	t3, -0x5b0(t3)
+     5b8: 000e0367     	jalr	t1, t3
+     5bc: 00000013     	nop
+     5c0: 00002e17     	auipc	t3, 0x2
+     5c4: a48e3e03     	ld	t3, -0x5b8(t3)
+     5c8: 000e0367     	jalr	t1, t3
+     5cc: 00000013     	nop
+
+Disassembly of section .text:
+
+00000000000005d0 <_start>:
+     5d0: 022000ef     	jal	0x5f2 <load_gp>
+     5d4: 87aa         	mv	a5, a0
+     5d6: 00002517     	auipc	a0, 0x2
+     5da: a0253503     	ld	a0, -0x5fe(a0)
+     5de: 6582         	ld	a1, 0x0(sp)
+     5e0: 0030         	addi	a2, sp, 0x8
+     5e2: ff017113     	andi	sp, sp, -0x10
+     5e6: 4681         	li	a3, 0x0
+     5e8: 4701         	li	a4, 0x0
+     5ea: 880a         	mv	a6, sp
+     5ec: fc5ff0ef     	jal	0x5b0 <.plt+0x20>
+     5f0: 9002         	ebreak
+
+00000000000005f2 <load_gp>:
+     5f2: 00002197     	auipc	gp, 0x2
+     5f6: 21e18193     	addi	gp, gp, 0x21e
+     5fa: 8082         	ret
+     5fc: 0001         	nop
+
+00000000000005fe <deregister_tm_clones>:
+     5fe: 00002517     	auipc	a0, 0x2
+     602: a1a50513     	addi	a0, a0, -0x5e6
+     606: 00002797     	auipc	a5, 0x2
+     60a: a1278793     	addi	a5, a5, -0x5ee
+     60e: 00a78863     	beq	a5, a0, 0x61e <deregister_tm_clones+0x20>
+     612: 00002797     	auipc	a5, 0x2
+     616: 9be7b783     	ld	a5, -0x642(a5)
+     61a: c391         	beqz	a5, 0x61e <deregister_tm_clones+0x20>
+     61c: 8782         	jr	a5
+     61e: 8082         	ret
+
+0000000000000620 <register_tm_clones>:
+     620: 00002517     	auipc	a0, 0x2
+     624: 9f850513     	addi	a0, a0, -0x608
+     628: 00002597     	auipc	a1, 0x2
+     62c: 9f058593     	addi	a1, a1, -0x610
+     630: 8d89         	sub	a1, a1, a0
+     632: 4035d793     	srai	a5, a1, 0x3
+     636: 91fd         	srli	a1, a1, 0x3f
+     638: 95be         	add	a1, a1, a5
+     63a: 8585         	srai	a1, a1, 0x1
+     63c: c599         	beqz	a1, 0x64a <register_tm_clones+0x2a>
+     63e: 00002797     	auipc	a5, 0x2
+     642: 9aa7b783     	ld	a5, -0x656(a5)
+     646: c391         	beqz	a5, 0x64a <register_tm_clones+0x2a>
+     648: 8782         	jr	a5
+     64a: 8082         	ret
+
+000000000000064c <__do_global_dtors_aux>:
+     64c: 00002797     	auipc	a5, 0x2
+     650: 9cc7c783     	lbu	a5, -0x634(a5)
+     654: e79d         	bnez	a5, 0x682 <__do_global_dtors_aux+0x36>
+     656: 1141         	addi	sp, sp, -0x10
+     658: e406         	sd	ra, 0x8(sp)
+     65a: 00002797     	auipc	a5, 0x2
+     65e: 9867b783     	ld	a5, -0x67a(a5)
+     662: c791         	beqz	a5, 0x66e <__do_global_dtors_aux+0x22>
+     664: 00002517     	auipc	a0, 0x2
+     668: 9ac53503     	ld	a0, -0x654(a0)
+     66c: 9782         	jalr	a5
+     66e: f91ff0ef     	jal	0x5fe <deregister_tm_clones>
+     672: 60a2         	ld	ra, 0x8(sp)
+     674: 4785         	li	a5, 0x1
+     676: 00002717     	auipc	a4, 0x2
+     67a: 9af70123     	sb	a5, -0x65e(a4)
+     67e: 0141         	addi	sp, sp, 0x10
+     680: 8082         	ret
+     682: 8082         	ret
+
+0000000000000684 <frame_dummy>:
+     684: bf71         	j	0x620 <register_tm_clones>
+
+0000000000000686 <main>:
+     686: 1101         	addi	sp, sp, -0x20
+     688: ec06         	sd	ra, 0x18(sp)
+     68a: e822         	sd	s0, 0x10(sp)
+     68c: 1000         	addi	s0, sp, 0x20
+     68e: 47a9         	li	a5, 0xa
+     690: fef42623     	sw	a5, -0x14(s0)
+     694: 47d1         	li	a5, 0x14
+     696: fef42423     	sw	a5, -0x18(s0)
+     69a: fec42783     	lw	a5, -0x14(s0)
+     69e: 873e         	mv	a4, a5
+     6a0: fe842783     	lw	a5, -0x18(s0)
+     6a4: 9fb9         	addw	a5, a5, a4
+     6a6: fef42223     	sw	a5, -0x1c(s0)
+     6aa: fe442783     	lw	a5, -0x1c(s0)
+     6ae: 85be         	mv	a1, a5
+     6b0: 00000517     	auipc	a0, 0x0
+     6b4: 02050513     	addi	a0, a0, 0x20
+     6b8: f09ff0ef     	jal	0x5c0 <.plt+0x30>
+     6bc: 4781         	li	a5, 0x0
+     6be: 853e         	mv	a0, a5
+     6c0: 60e2         	ld	ra, 0x18(sp)
+     6c2: 6442         	ld	s0, 0x10(sp)
+     6c4: 6105         	addi	sp, sp, 0x20
+     6c6: 8082         	ret

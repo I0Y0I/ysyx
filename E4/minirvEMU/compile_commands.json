@@ -1,0 +1,38 @@
+[
+  {
+    "arguments": [
+      "/usr/lib/ccache/bin/gcc",
+      "-std=gnu11",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-I/home/ioyoi/Documents/code/ysyx/E4/minirvEMU/include",
+      "-I/home/ioyoi/Documents/code/ysyx/ysyx-workbench/abstract-machine/am/include/",
+      "-I/home/ioyoi/Documents/code/ysyx/ysyx-workbench/abstract-machine/klib/include/",
+      "-D__ISA__=\"native\"",
+      "-D__ISA_NATIVE__",
+      "-D__ARCH__=native",
+      "-D__ARCH_NATIVE",
+      "-D__PLATFORM__=",
+      "-D__PLATFORM_",
+      "-DARCH_H=\"arch/native.h\"",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-Wno-main",
+      "-U_FORTIFY_SOURCE",
+      "-fvisibility=hidden",
+      "-fpie",
+      "-I/usr/include/SDL2",
+      "-D_GNU_SOURCE=1",
+      "-D_REENTRANT",
+      "-c",
+      "-o",
+      "/home/ioyoi/Documents/code/ysyx/E4/minirvEMU/build/native/emu.o",
+      "/home/ioyoi/Documents/code/ysyx/E4/minirvEMU/emu.c"
+    ],
+    "directory": "/home/ioyoi/Documents/code/ysyx/E4/minirvEMU",
+    "file": "/home/ioyoi/Documents/code/ysyx/E4/minirvEMU/emu.c",
+    "output": "/home/ioyoi/Documents/code/ysyx/E4/minirvEMU/build/native/emu.o"
+  }
+]
